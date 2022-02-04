@@ -25,3 +25,9 @@ model Post {
   author    User?    @relation(fields: [authorId], references: [id])
   authorId  Int?
 }
+
+model task {
+  id      Int     @default(autoincrement()) @id
+  title   String
+  content String?
+}
